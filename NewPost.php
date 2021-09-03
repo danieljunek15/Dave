@@ -10,7 +10,7 @@
 <body>
     <div>
     <?php 
-        include 'DatabaseConnectieDAVE.php';
+        include 'DatabaseConnection.php';
 
         if(isset($_POST["submit"])) {
             $daveNewPostData = $conn->prepare('INSERT INTO sociaal_dave_database.posts_dave (post_title, post_text, post_img) VALUE (?, ?, ?)');

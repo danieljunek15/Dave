@@ -1,6 +1,6 @@
 <?php 
 
-include 'DatabaseConnectieDAVE.php';
+include 'DatabaseConnection.php';
 
 $davePostdata = $conn->prepare('SELECT * FROM sociaal_dave_database.posts_dave');
 $davePostdata->execute();
@@ -32,13 +32,20 @@ function displayContent()
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="CSS/HomePost.css">
+    <title>dave home</title>
 </head>
 <body>
-
-    <?php
-    displayContent();
-    ?>
-
+    <div class="outerContainer">
+        <div class="navbar">
+            <input class="homeButton" type="button" name="home" value="Home page">
+            <input class="newPostButton" type="button" name="newPost" value="Add new posts">
+        </div>
+        <div class="content">
+            <?php
+            displayContent();
+            ?>
+        </div>
+    </div>
 </body>
 </html>
