@@ -16,7 +16,7 @@ function displayContent()
             <div class="content">
                 <img class="postImages" src="<?php echo $row->post_img; ?>">
                 <div class="contentText">
-                    <h2><?php echo $row->post_title; ?></h2>
+                    <h2 class="awesome"><?php echo $row->post_title; ?></h2>
                     <p class="postText"><?php echo $row->post_text; ?></p><br>
                     <span class="details">Geschreven op <?php echo $row->time_date; ?> door <?php echo $row->post_auteur; ?>.</span>
                 </div>
