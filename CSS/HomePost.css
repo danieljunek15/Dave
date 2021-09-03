@@ -1,19 +1,66 @@
+.body {
+    background-color: green;
+}
+
 .outerContainer {
-
-}
-
-.navbar {
-
-}
-
-.homeButton {
-
-}
-
-.newPostButton {
+    background-color: rgb(200, 255, 200);
     
 }
 
-.content {
+.navbar {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+    height: 150px;
+    background-color: green;
+}
 
+.homeButton {
+    background-color: lightgreen;
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+}
+
+.newPostButton {
+    background-color: lightgreen;
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+}
+
+.contentBox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: stretch;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid rgb(72, 97, 72);
+    box-shadow: 1px 1px 1px 1px rgb(72, 97, 72);
+    border-radius: 3%;
+    margin-bottom: 5%;
+}
+
+.postImages {
+    border-radius: 3%;
+    max-height: min-content;
+    width: 400px;
+    object-fit: scale-down;
+}
+
+.contentText {
+    padding: 3%;
+    width: 400px;
+}
+
+.postText {
+    width: 350px;
 }

@@ -13,12 +13,14 @@ function displayContent()
     foreach ($davePostdata as $row) {
         ?>
         <form method="post">
-            <div>
-                <h2><?php echo $row->post_title; ?></h2>
-                <img src="<?php echo $row->post_img; ?>"><br/><br/>
-                <b><?php echo $row->post_text; ?></b>
+            <div class="content">
+                <img class="postImages" src="<?php echo $row->post_img; ?>">
+                <div class="contentText">
+                    <h2><?php echo $row->post_title; ?></h2>
+                    <p class="postText"><?php echo $row->post_text; ?></p><br>
+                    <span class="details">Geschreven op <?php echo $row->time_date; ?> door <?php echo $row->post_auteur; ?>.</span>
+                </div>
             </div>
-            <span class="details">Geschreven op: <?php echo $row->time_date; ?></span>
         </form>
         <?php
     }
@@ -37,11 +39,12 @@ function displayContent()
 </head>
 <body>
     <div class="outerContainer">
-        <div class="navbar">
-            <input class="homeButton" type="button" name="home" value="Home page">
-            <input class="newPostButton" type="button" name="newPost" value="Add new posts">
-        </div>
-        <div class="content">
+        <form action="NewPost.php" method="post">
+            <div class="navbar">
+                <input class="newPostButton" type="submit" name="newPost" value="Add new posts">
+            </div>
+        </form> 
+        <div class="contentBox">
             <?php
             displayContent();
             ?>
