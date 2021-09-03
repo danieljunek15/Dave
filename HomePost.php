@@ -1,6 +1,7 @@
 <?php 
 
-include 'DatabaseConnectieDAVE.php';
+include 'DatabaseConnection.php';
+
 
 $davePostdata = $conn->prepare('SELECT * FROM sociaal_dave_database.posts_dave');
 $davePostdata->execute();
